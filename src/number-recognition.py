@@ -139,6 +139,7 @@ def evaluate_accuracy(test_folder, patterns, size=(6, 9)):
             prediction = classify_image(img_path, patterns, size)
             actual_labels.append(digit)
             predicted_labels.append(prediction)
+            print(f"Gambar Uji {img_name} (Sebenarnya: {digit}) -> Prediksi: {prediction}")
             
             # Update confusion matrix
             confusion_matrix[digit][prediction] += 1
